@@ -3,6 +3,7 @@ import Catalog from "../../features/catalog/Catalog";
 import Header from "./Header";
 import React, { useState } from "react";
 import { Container, createTheme, CssBaseline, ThemeProvider } from "@mui/material";
+import { Outlet } from "react-router-dom";
 
 function App() {  
 
@@ -29,7 +30,7 @@ function App() {
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
 
       <Container>
-        <Catalog />         
+        <Outlet />         
       </Container>
       </ThemeProvider>
     </React.Fragment>
